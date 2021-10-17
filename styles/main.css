@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -230,7 +231,152 @@ template {
   overflow: hidden;
 }
 
+header {
+  height: 7.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.headerContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.headerContainer .logoContainer {
+  height: 100%;
+  border: 4px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 9rem;
+  width: 6rem;
+}
+.headerContainer .logoContainer img {
+  max-width: 80%;
+  margin-top: 3%;
+  margin-left: 3%;
+}
+.headerContainer nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-right: 9rem;
+}
+.headerContainer nav ul li {
+  list-style-type: none;
+  margin: 1.5rem;
+  font-size: 1.1rem;
+}
+.headerContainer nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.heroHeaderContainer {
+  height: 60vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.heroImgContainer {
+  max-height: 100%;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+}
+.heroImgContainer img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.firstTextContainer {
+  margin-top: 18rem;
+  -webkit-transform: skew(30deg);
+          transform: skew(30deg);
+}
+.firstTextContainer h2 {
+  -webkit-transform: skew(-30deg);
+          transform: skew(-30deg);
+}
+
+.secondTextContainer {
+  margin-top: 25rem;
+  margin-left: 7rem;
+  -webkit-transform: skew(30deg);
+          transform: skew(30deg);
+}
+.secondTextContainer h2 {
+  -webkit-transform: skew(-30deg);
+          transform: skew(-30deg);
+}
+
+.firstTextContainer,
+.secondTextContainer {
+  grid-row-start: 1;
+  grid-column: 1/-1;
+  text-align: center;
+  background: white;
+  height: 5rem;
+  width: 70%;
+}
+
+.projectTypeSelector {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.projectTypeSelector li {
+  list-style-type: none;
+}
+
+.workContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(490px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  width: 70%;
+  margin: 0 auto;
+}
+.workContainer .project {
+  height: 10rem;
+  border: 1px solid black;
+}
+
 body {
   font-size: 125%;
-  margin: 7.5rem 0 0 0;
+  margin: 0rem 0 0 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.mainContainer {
+  max-width: 1600px;
+  margin: 0 auto;
 }

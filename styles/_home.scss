@@ -1,0 +1,90 @@
+
+.heroHeaderContainer {
+  height: 60vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  
+  
+}
+
+.heroImgContainer {
+  max-height: 100%;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    
+  }
+
+
+}
+
+
+.firstTextContainer {
+  
+  margin-top: 18rem;
+  
+  transform: skew(30deg);
+
+  h2 {
+    transform: skew(-30deg);
+  }
+  
+}
+
+.secondTextContainer {
+  
+  margin-top: 25rem;
+  
+  margin-left: 7rem;
+  transform: skew(30deg);
+
+  h2 {
+    transform: skew(-30deg);
+  }
+  
+}
+
+.firstTextContainer,
+.secondTextContainer {
+  grid-row-start: 1;
+  grid-column: 1/-1;
+  text-align: center;
+  background: white;
+  // width: content-width;
+  height: 5rem;
+  width: 70%;
+  
+}
+
+.projectTypeSelector {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+
+  li {
+    list-style-type: none;
+  }
+}
+
+.workContainer {
+  display: grid;
+  
+  grid-template-columns: repeat(auto-fit, minmax(490px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  width: 70%;
+  margin: 0 auto;
+
+  .project {
+    height: 10rem;
+    border: 1px solid black;
+  }
+}
+
+
