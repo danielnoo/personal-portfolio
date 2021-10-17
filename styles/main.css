@@ -233,6 +233,7 @@ template {
 
 header {
   height: 7.5rem;
+  padding: 4rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -361,9 +362,34 @@ header {
   width: 70%;
   margin: 0 auto;
 }
-.workContainer .project {
-  height: 10rem;
-  border: 1px solid black;
+.workContainer .project h3 {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+.workContainer .project .workImgContainer {
+  position: relative;
+  overflow: hidden;
+}
+.workContainer .project .workImgContainer img {
+  max-width: 100%;
+}
+.workContainer .project .workImgContainer .filmFactory {
+  background: #ffcc6e;
+}
+.workContainer .project .workImgContainer .blogz {
+  background: #5ecae6;
+}
+.workContainer .project .workImgContainer .triviaBlitz {
+  background: #16cfb0;
+}
+.workContainer .project .workImgContainer .beachStays {
+  background: #b94cec;
+}
+.workContainer .project .workImgContainer .shaunYoung {
+  background: #889899;
+}
+.workContainer .project .workImgContainer .epicEuchre {
+  background: #f8ff91;
 }
 
 body {

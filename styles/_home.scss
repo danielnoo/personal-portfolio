@@ -82,8 +82,39 @@
   margin: 0 auto;
 
   .project {
-    height: 10rem;
-    border: 1px solid black;
+    
+    h3 {
+      font-weight: 400;
+      font-size: 0.9rem;
+    }
+
+    .workImgContainer {
+      position: relative;
+      overflow: hidden;
+
+      img {
+        max-width: 100%;
+      }
+
+      .filmFactory {
+        background: rgb(255, 204, 110);
+      }
+      .blogz {
+        background: rgb(94, 202, 230);
+      }
+      .triviaBlitz {
+        background: rgb(22, 207, 176);
+      }
+      .beachStays {
+        background: rgb(185, 76, 236);
+      }
+      .shaunYoung {
+        background: rgb(136, 152, 153);
+      }
+      .epicEuchre {
+        background: rgb(248, 255, 145);
+      }
+    }
   }
 }
 
