@@ -61,6 +61,13 @@
   
 }
 
+
+///////////////////////////////////////////////
+////////////PROJECT SECTION
+//////////////////////////////////////////////
+
+
+
 .projectTypeSelector {
   margin: 0;
   padding: 0;
@@ -125,11 +132,11 @@
 
 .projectDetails {
   position: absolute;
-  background-color: grey;
+  background-color: rgba(206, 202, 202, 0.7);
   width: 100%;
-  height: 100%;
-  top: -30rem;
-  transition: all 0.5s ease-in;
+  height: 99%;
+  top: -47rem;
+  transition: all 0.3s ease-in;
 }
 
 .mouseOverSlide {

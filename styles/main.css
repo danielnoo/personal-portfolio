@@ -15,7 +15,7 @@ article, aside, footer, header, nav, section {
 
 h1 {
   font-size: 2em;
-  margin: .67em 0;
+  margin: 0.67em 0;
 }
 
 figcaption, figure, main {
@@ -34,7 +34,7 @@ hr {
 }
 
 pre {
-  font-family: monospace,monospace;
+  font-family: monospace, monospace;
   font-size: 1em;
 }
 
@@ -59,7 +59,7 @@ b, strong {
 }
 
 code, kbd, samp {
-  font-family: monospace,monospace;
+  font-family: monospace, monospace;
   font-size: 1em;
 }
 
@@ -84,11 +84,11 @@ sub, sup {
 }
 
 sub {
-  bottom: -.25em;
+  bottom: -0.25em;
 }
 
 sup {
-  top: -.5em;
+  top: -0.5em;
 }
 
 audio, video {
@@ -137,7 +137,7 @@ button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring
 }
 
 fieldset {
-  padding: .35em .75em .625em;
+  padding: 0.35em 0.75em 0.625em;
 }
 
 legend {
@@ -207,7 +207,7 @@ template {
   visibility: hidden;
   display: block;
   font-size: 0;
-  content: '';
+  content: "";
   clear: both;
   height: 0;
 }
@@ -254,7 +254,6 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-
 .headerContainer .logoContainer {
   height: 100%;
   border: 4px solid black;
@@ -270,13 +269,11 @@ header {
   margin-left: 9rem;
   width: 6rem;
 }
-
 .headerContainer .logoContainer img {
   max-width: 80%;
   margin-top: 3%;
   margin-left: 3%;
 }
-
 .headerContainer nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -285,13 +282,11 @@ header {
   padding: 0;
   margin-right: 9rem;
 }
-
 .headerContainer nav ul li {
   list-style-type: none;
   margin: 1.5rem;
   font-size: 1.1rem;
 }
-
 .headerContainer nav ul li a {
   text-decoration: none;
   color: black;
@@ -300,10 +295,8 @@ header {
 .heroHeaderContainer {
   height: 60vh;
   overflow: hidden;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
+  grid-template-columns: 50% 50%;
 }
 
 .heroImgContainer {
@@ -311,7 +304,6 @@ header {
   grid-column: 1/-1;
   grid-row: 1/-1;
 }
-
 .heroImgContainer img {
   max-width: 100%;
   max-height: 100%;
@@ -322,7 +314,6 @@ header {
   -webkit-transform: skew(30deg);
           transform: skew(30deg);
 }
-
 .firstTextContainer h2 {
   -webkit-transform: skew(-30deg);
           transform: skew(-30deg);
@@ -334,7 +325,6 @@ header {
   -webkit-transform: skew(30deg);
           transform: skew(30deg);
 }
-
 .secondTextContainer h2 {
   -webkit-transform: skew(-30deg);
           transform: skew(-30deg);
@@ -342,8 +332,7 @@ header {
 
 .firstTextContainer,
 .secondTextContainer {
-  -ms-grid-row: 1;
-      grid-row-start: 1;
+  grid-row-start: 1;
   grid-column: 1/-1;
   text-align: center;
   background: white;
@@ -361,68 +350,56 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
 }
-
 .projectTypeSelector li {
   list-style-type: none;
 }
 
 .workContainer {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(490px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(490px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(490px, 1fr));
   gap: 2rem;
   padding: 2rem;
   width: 70%;
   margin: 0 auto;
 }
-
 .workContainer .project h3 {
   font-weight: 400;
   font-size: 0.9rem;
 }
-
 .workContainer .project .workImgContainer {
   position: relative;
   overflow: hidden;
 }
-
 .workContainer .project .workImgContainer img {
   max-width: 100%;
 }
-
 .workContainer .project .workImgContainer .filmFactory {
   background: #ffcc6e;
 }
-
 .workContainer .project .workImgContainer .blogz {
   background: #5ecae6;
 }
-
 .workContainer .project .workImgContainer .triviaBlitz {
   background: #16cfb0;
 }
-
 .workContainer .project .workImgContainer .beachStays {
   background: #b94cec;
 }
-
 .workContainer .project .workImgContainer .shaunYoung {
   background: #889899;
 }
-
 .workContainer .project .workImgContainer .epicEuchre {
   background: #f8ff91;
 }
 
 .projectDetails {
   position: absolute;
-  background-color: grey;
+  background-color: rgba(206, 202, 202, 0.7);
   width: 100%;
-  height: 100%;
-  top: -30rem;
-  -webkit-transition: all 0.5s ease-in;
-  transition: all 0.5s ease-in;
+  height: 99%;
+  top: -47rem;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .mouseOverSlide {
