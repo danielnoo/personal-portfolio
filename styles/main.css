@@ -256,7 +256,8 @@ header {
 }
 .headerContainer .logoContainer {
   height: 100%;
-  border: 4px solid black;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -456,6 +457,48 @@ header {
 
 .mouseOverSlide {
   top: 0;
+}
+
+footer {
+  margin-top: 4rem;
+  border-top: 1px solid #adadad;
+}
+
+.footerContainer {
+  width: 100%;
+  height: 9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.footerContainer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+}
+.footerContainer ul li {
+  list-style: none;
+  padding: 0.5rem 2.5rem;
+  margin: 0.5rem 1.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.footerContainer ul li:hover {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background-color: black;
+  color: white;
+}
+.footerContainer ul li:hover i {
+  color: white;
+}
+.footerContainer ul li a {
+  text-decoration: none;
+  color: black;
 }
 
 body {
