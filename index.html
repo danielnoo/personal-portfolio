@@ -43,57 +43,118 @@
               </div> 
             </div> <!-- end heroHeaderContainer -->
             <ul class="projectTypeSelector">
-              <li>All</li>
-              <li>React</li>
-              <li>VanillaJS</li>
+              <li><button class="selected" id="allButton">All</button></li>
+              <li><button id="reactButton">React</button></li>
+              <li><button id="jsButton">VanillaJS</button></li>
             </ul>
             <div class="workContainer">
-              <div class="project">
-                <h3>Film Factory</h3>
+              <div class="project" id="projectOneParent">
+                <h3>The Film Factory</h3>
                 <div class="workImgContainer">
-                  <div class="projectDetails">
-                    <ul>
-                      <li>Live Site</li>
-                      <li>Git Repo</li>
-                      <li></li>
-                    </ul>
+                  <div class="projectDetails" id="projectOneDetails">
+                    <p>A group project created with the help of Linh Thuy, Iris Chan, and Rob Klassen.</p>
+                    <p>The Film Factory is a film recommendation app that utilizes The Movie Database api to recommend foreign language films based on an English movie selection.</p>
+                    <p>Notable achievements in this project were the use of batched api calls using promise.all(), and sorting a large database of results using pagination in React.</p>
+                    <p>The Film Factory was built using React, React Router, Axios, Firebase, and Sass.</p>
+                    <nav>
+                      <ul>
+                        <li><a href="https://thfilmfactory.netlify.app/">Live Site</a></li>
+                        <li><a href="https://github.com/The-Film-Factory/the-film-factory">Git Repo</a></li>
+                      </ul>
+                    </nav>
                   </div>
                   <img class="filmFactory" src="./assets/mockupswebp/filmfmobile.webp" alt="Film Factory">
                 </div>
               </div>
-              <div class="project">
+              <div class="project" id="projectTwoParent">
                 <h3>Blogz</h3>
                 <div class="workImgContainer">
+                  <div class="projectDetails" id="projectTwoDetails">
+                    <p>A fully functional blogging platform created using React</p>    
+                    <p>Blogz allows users to create articles that include titles, subtitles, images, and body text.</p>
+                    <p>A technological hurdle in this project was dealing with dynamic input creation within a custom built React form.</p>
+                    <p>This project was created using React, Firebase database and authentication, and styled with Sass.</p>
+                    <nav>
+                      <ul>
+                        <li><a href="https://zealous-edison-a409a9.netlify.app/">Live Site</a></li>
+                        <li><a href="https://github.com/danielnoo/daniel-noordegraaf-project-3">Git Repo</a></li>
+                      </ul>
+                    </nav>
+                  </div>
                   <img class="blogz" src="./assets/mockupswebp/blogzmobile.webp" alt="Blogz">
                 </div>
               </div>
-              <div class="project">
+              <div class="project" id="projectThreeParent">
                 <h3>Trivia Blitz</h3>
                 <div class="workImgContainer">
+                  <div class="projectDetails" id="projectThreeDetails">
+                    <p>A pair-programmed app created with Ryan May</p>
+                    <p>Trivia Blitz takes in user input to create custom trivia games using the Open Trivia API</p>
+                    <p>The user is served a fully scripted trivia game experience that calculates score based on time taken to answer each question.</p>
+                    <p>The Open Trivia API is good but not perfect, so error handling played a key role in guaranteeing a consistent user experience.</p>
+                    <p>Trivia Blitz was created using Vanilla Javascript and Sass</p>
+                    <nav>
+                      <ul>
+                        <li><a href="https://goofy-bhabha-ccfd7f.netlify.app/index.html">Live Site</a></li>
+                        <li><a href="https://github.com/triviablitz/triviaBlitz">Git Repo</a></li>
+                      </ul>
+                    </nav>
+                  </div>
                   <img class="triviaBlitz" src="./assets/mockupswebp/tbmobile.webp" alt="triviablitz">
                 </div>
               </div>
-              <div class="project">
+              <div class="project" id="projectFourParent">
                 <h3>Beach Stays</h3>
                 <div class="workImgContainer">
+                  <div class="projectDetails" id="projectFourDetails">
+                    <p>A pixel-perfect PSD conversion created to practice working with design documents.</p>
+                    <p>I enjoyed being assigned a task that required such styling precision because I was able to flex my problem solving skills to achieve great looking results relatively quickly.</p>
+                    <p>Beach Stays was created using HTML, SASS, and CSS Grid.</p>
+                    <nav>
+                      <ul>
+                        <li><a href="https://danielnoo.github.io/daniel-noordegraaf-project-one/">Live Site</a></li>
+                        <li><a href="https://github.com/danielnoo/daniel-noordegraaf-project-one">Git Repo</a></li>
+                      </ul>
+                    </nav>
+                  </div>
                   <img class="beachStays" src="./assets/mockupswebp/beachstaysmobile.webp" alt="beach stays">
                 </div>
               </div>
-              <div class="project">
+              <div class="project" id="projectFiveParent">
                 <h3>Shaun Young RMT</h3>
                 <div class="workImgContainer">
+                  <div class="projectDetails" id="projectFiveDetails">
+                    <p>A paid job for which I was tasked to build a website for a local massage therapist.</p>
+                    <p>I came upon this opportunity shortly before I started bootcamp at Juno College. Being short on time I opted to use Gatsby to get the site up and running quickly and efficiently, and also to get some experience with static site generators.</p>
+                    <p>This site was created using Gatsby and Sass, and in my humble opinion it looks great!</p>    
+                    <nav>
+                      <ul>
+                        <li><a href="https://www.shaunyoungrmt.com/">Live Site</a></li>
+                        <li><a href="https://github.com/danielnoo/syrmt">Git Repo</a></li>
+                      </ul>
+                    </nav>
+                  </div>
                   <img class="shaunYoung" src="./assets/mockupswebp/syrmtmobile.webp" alt="shaun young rmt">
                 </div>
               </div>
-              <div class="project">
+              <div class="project" id="projectSixParent">
                 <h3>Epic Euchre</h3>
                 <div class="workImgContainer">
+                  <div class="projectDetails" id="projectSixDetails">
+                    <p>A multiplayer euchre game that I created to help my family better keep in touch during the pandemic.</p>
+                    <p>The code base for this project quickly became large and unwieldly because I wasn't yet familiar with the organizational benefits of namespacing in javascript. I kept it organised as best I could using comments, but because of the long-scripted nature of socket.io organization, the code is still quite verbose. Despite this, I'm still proud of this project and have decided to include it in my portfolio to showcase my growth as a developer.</p> 
+                    <p>Epic Euchre was created using Node.js, Express, Vanilla Javascript, Socket.io, and SASS.</p>   
+                    <nav>
+                      <ul>
+                        <li><a href="https://protected-falls-71060.herokuapp.com/">Live Site</a></li>
+                        <li><a href="https://github.com/danielnoo/socketeuchre">Git Repo</a></li>
+                      </ul>
+                    </nav>
+                  </div>
                   <img class="epicEuchre" src="./assets/mockupswebp/eemobile.webp" alt="epic euchre">
                 </div>
               </div>
             </div>
-            
-            
           </div>
         </section>
       </div>
@@ -102,10 +163,13 @@
     <footer>
 
     </footer>
-
   </div>
-  
+  <script src="./scripts.js" type="module"></script>
 </body>
 </html>
+                        
+            
+            
+
         
             
