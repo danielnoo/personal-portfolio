@@ -291,6 +291,16 @@ header {
 .headerContainer nav ul li a {
   text-decoration: none;
   color: black;
+  letter-spacing: 5px;
+  border: 3px solid white;
+  padding: 0.3rem 2rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.headerNav .navSelected {
+  border: 3px solid black;
 }
 
 .heroHeaderContainer {
@@ -341,6 +351,36 @@ header {
   width: 70%;
 }
 
+.homeSocialNav {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  justify-self: end;
+}
+.homeSocialNav ul {
+  padding: 0;
+  margin-top: 4rem;
+  margin-right: 1.5rem;
+}
+.homeSocialNav ul li {
+  list-style-type: none;
+  margin: 1.2rem;
+  font-size: 1.6rem;
+}
+.homeSocialNav ul li a {
+  color: white;
+  padding: 0.7rem;
+}
+.homeSocialNav ul li a:hover {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: black;
+}
+.homeSocialNav ul li a:focus {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: black;
+}
+
 .projectTypeSelector {
   padding: 0;
   margin-top: 3rem;
@@ -360,9 +400,11 @@ header {
   width: 8rem;
   padding: 0.5rem 0;
   cursor: pointer;
-  border: none;
+  border: 3px solid white;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  font-size: 1rem;
+  letter-spacing: 3px;
 }
 
 .projectTypeSelector .selected {
@@ -420,6 +462,16 @@ header {
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
   font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .projectDetails p {
   padding: 0.5rem 1rem 0 1rem;
@@ -493,12 +545,16 @@ footer {
   background-color: black;
   color: white;
 }
+.footerContainer ul li:hover a {
+  color: white;
+}
 .footerContainer ul li:hover i {
   color: white;
 }
 .footerContainer ul li a {
   text-decoration: none;
   color: black;
+  letter-spacing: 3px;
 }
 
 body {
