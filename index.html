@@ -43,14 +43,14 @@
               </div> 
             </div> <!-- end heroHeaderContainer -->
             <ul class="projectTypeSelector">
-              <li>All</li>
-              <li>React</li>
-              <li>VanillaJS</li>
+              <li><button class="selected" id="allButton">All</button></li>
+              <li><button id="reactButton">React</button></li>
+              <li><button id="jsButton">VanillaJS</button></li>
             </ul>
             <div class="workContainer">
-              <div class="project">
+              <div class="project" id="projectOneParent">
                 <h3>The Film Factory</h3>
-                <div class="workImgContainer" id="projectOneParent">
+                <div class="workImgContainer">
                   <div class="projectDetails" id="projectOneDetails">
                     <p>A group project created with the help of Linh Thuy, Iris Chan, and Rob Klassen.</p>
                     <p>The Film Factory is a film recommendation app that utilizes The Movie Database api to recommend foreign language films based on an English movie selection.</p>
@@ -66,9 +66,9 @@
                   <img class="filmFactory" src="./assets/mockupswebp/filmfmobile.webp" alt="Film Factory">
                 </div>
               </div>
-              <div class="project">
+              <div class="project" id="projectTwoParent">
                 <h3>Blogz</h3>
-                <div class="workImgContainer" id="projectTwoParent">
+                <div class="workImgContainer">
                   <div class="projectDetails" id="projectTwoDetails">
                     <p>A fully functional blogging platform created using React</p>    
                     <p>Blogz allows users to create articles that include titles, subtitles, images, and body text.</p>
@@ -84,9 +84,9 @@
                   <img class="blogz" src="./assets/mockupswebp/blogzmobile.webp" alt="Blogz">
                 </div>
               </div>
-              <div class="project">
+              <div class="project" id="projectThreeParent">
                 <h3>Trivia Blitz</h3>
-                <div class="workImgContainer" id=projectThreeParent>
+                <div class="workImgContainer">
                   <div class="projectDetails" id="projectThreeDetails">
                     <p>A pair-programmed app created with Ryan May</p>
                     <p>Trivia Blitz takes in user input to create custom trivia games using the Open Trivia API</p>
@@ -103,9 +103,9 @@
                   <img class="triviaBlitz" src="./assets/mockupswebp/tbmobile.webp" alt="triviablitz">
                 </div>
               </div>
-              <div class="project">
+              <div class="project" id="projectFourParent">
                 <h3>Beach Stays</h3>
-                <div class="workImgContainer" id="projectFourParent">
+                <div class="workImgContainer">
                   <div class="projectDetails" id="projectFourDetails">
                     <p>A pixel-perfect PSD conversion created to practice working with design documents.</p>
                     <p>I enjoyed being assigned a task that required such styling precision because I was able to flex my problem solving skills to achieve great looking results relatively quickly.</p>
@@ -120,11 +120,11 @@
                   <img class="beachStays" src="./assets/mockupswebp/beachstaysmobile.webp" alt="beach stays">
                 </div>
               </div>
-              <div class="project">
+              <div class="project" id="projectFiveParent">
                 <h3>Shaun Young RMT</h3>
-                <div class="workImgContainer" id="projectFiveParent">
+                <div class="workImgContainer">
                   <div class="projectDetails" id="projectFiveDetails">
-                    <p>A paid job in which I was tasked to build a website for a local massage therapist.</p>
+                    <p>A paid job for which I was tasked to build a website for a local massage therapist.</p>
                     <p>I came upon this opportunity shortly before I started bootcamp at Juno College. Being short on time I opted to use Gatsby to get the site up and running quickly and efficiently, and also to get some experience with static site generators.</p>
                     <p>This site was created using Gatsby and Sass, and in my humble opinion it looks great!</p>    
                     <nav>
@@ -137,9 +137,9 @@
                   <img class="shaunYoung" src="./assets/mockupswebp/syrmtmobile.webp" alt="shaun young rmt">
                 </div>
               </div>
-              <div class="project">
+              <div class="project" id="projectSixParent">
                 <h3>Epic Euchre</h3>
-                <div class="workImgContainer" id="projectSixParent">
+                <div class="workImgContainer">
                   <div class="projectDetails" id="projectSixDetails">
                     <p>A multiplayer euchre game that I created to help my family better keep in touch during the pandemic.</p>
                     <p>The code base for this project quickly became large and unwieldly because I wasn't yet familiar with the organizational benefits of namespacing in javascript. I kept it organised as best I could using comments, but because of the long-scripted nature of socket.io organization, the code is still quite verbose. Despite this, I'm still proud of this project and have decided to include it in my portfolio to showcase my growth as a developer.</p> 
@@ -148,7 +148,6 @@
                       <ul>
                         <li><a href="https://protected-falls-71060.herokuapp.com/">Live Site</a></li>
                         <li><a href="https://github.com/danielnoo/socketeuchre">Git Repo</a></li>
-                        
                       </ul>
                     </nav>
                   </div>
@@ -156,8 +155,6 @@
                 </div>
               </div>
             </div>
-            
-            
           </div>
         </section>
       </div>
@@ -166,10 +163,13 @@
     <footer>
 
     </footer>
-
   </div>
   <script src="./scripts.js" type="module"></script>
 </body>
 </html>
+                        
+            
+            
+
         
             
