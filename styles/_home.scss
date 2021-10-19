@@ -12,7 +12,7 @@
   max-height: 100%;
   grid-column: 1/-1;
   grid-row: 1/-1;
-  
+    
 
   img {
     max-width: 100%;
@@ -55,11 +55,46 @@
   grid-column: 1/-1;
   text-align: center;
   background: white;
-  // width: content-width;
   height: 5rem;
   width: 70%;
   
 }
+  
+
+.homeSocialNav {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  justify-self: end;
+
+  ul {
+    padding: 0;
+    margin-top: 4rem;
+    margin-right: 1.5rem;
+
+    li{
+      list-style-type: none;
+      margin: 1.2rem;
+      font-size: 1.6rem;
+
+      a {
+        color: white;
+        padding: 0.7rem;
+        
+        &:hover {
+          transition: all .2s ease-in-out;
+          color: black;
+        }
+        &:focus {
+          transition: all .2s ease-in-out;
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+
+      
 
 
 ///////////////////////////////////////////////
@@ -83,8 +118,10 @@
       width: 8rem;
       padding: 0.5rem 0;
       cursor: pointer;
-      border: none;
+      border: 3px solid white;
       transition: all 0.5s ease;
+      font-size: 1rem;
+      letter-spacing: 3px;
     }
   }
 }
@@ -100,12 +137,12 @@
 
 .workContainer {
   display: grid;
-  
   grid-template-columns: repeat(auto-fit, minmax(490px, 1fr));
   gap: 2rem;
   padding: 2rem;
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
+  
 
   .project {
     
@@ -151,12 +188,15 @@
 
 .projectDetails {
   position: absolute;
-  background-color: rgba(206, 202, 202, 0.85);
+  background-color: rgba(245, 245, 245, 0.95);
   width: 100%;
   height: 99%;
   top: -47rem;
   transition: all 0.3s ease-in;
   font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   p {
     padding: 0.5rem 1rem 0 1rem;
@@ -178,6 +218,7 @@
         background: white;
         padding: 0.4rem 3rem;
         transition: all 0.5s ease-in;
+        border: 3px solid black;
 
         &:hover {
           background-color: black;
