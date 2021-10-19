@@ -188,7 +188,7 @@
 
 .projectDetails {
   position: absolute;
-  background-color: rgba(206, 202, 202, 0.85);
+  background-color: rgba(245, 245, 245, 0.95);
   width: 100%;
   height: 99%;
   top: -47rem;
@@ -218,6 +218,7 @@
         background: white;
         padding: 0.4rem 3rem;
         transition: all 0.5s ease-in;
+        border: 3px solid black;
 
         &:hover {
           background-color: black;

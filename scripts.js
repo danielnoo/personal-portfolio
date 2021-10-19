@@ -34,15 +34,39 @@ app.workButton = document.querySelector('.workButton');
 app.aboutButton = document.querySelector('.aboutButton');
 
 
-
+//////come back to finish with add/remove visibility to about page
+// also see about adding removing smooth scroll during function
 
 app.handleNavClick = (e) => {
   e.preventDefault();
+  
+  const projectsPage = document.querySelector('#projectPage');
   const selectedLink = document.querySelector('.navSelected');
   selectedLink.classList.remove('navSelected');
   e.target.classList.add('navSelected');
 
+  if(e.target.innerText === 'Work') {
+    projectsPage.classList.remove('notVisible');
+    window.scroll({
+      top: 850,
+      left: 0,
+      behavior: 'smooth'
+    });
+  } else if(e.target.innerText === 'About') {
+    projectsPage.classList.add('notVisible');
+  } else {
+    projectsPage.classList.remove('notVisible');
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+    
+  }
+
 }
+    
+    
 
 
 
