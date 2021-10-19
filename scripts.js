@@ -155,7 +155,7 @@ app.footerAboutButtonClick = () => {
     app.homeButton.classList.remove('navSelected');
     app.workButton.classList.remove('navSelected');
     projectsPage.classList.add('notVisible');
-    
+    aboutPage.classList.remove('notVisible');
   }
 };
 
