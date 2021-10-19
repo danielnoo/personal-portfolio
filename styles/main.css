@@ -610,3 +610,24 @@ body {
   max-width: 1600px;
   margin: 0 auto;
 }
+
+.scrollHomeButton {
+  position: fixed;
+  bottom: 12rem;
+  right: 2rem;
+  color: white;
+  background-color: black;
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  visibility: hidden;
+}

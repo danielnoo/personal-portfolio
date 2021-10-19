@@ -194,7 +194,7 @@
             </div>
           </div>
         </section>
-        <section id="aboutSection">
+        <section id="aboutSection" class="notVisible">
           <div class="aboutContainer">
             <div class="aboutImgContainer">
               <img src="./assets/dnfamily.webp" alt="Daniel and Family" loading="lazy">
@@ -202,6 +202,14 @@
             <div class="aboutTextContainer">
               <h4>I'm Daniel and I'm <span id="textReplace"></span></h4>
               <p>If you find me away from my computer I'm probably cycling my baby around the city, trying to play tennis, smashing a squash ball(in the olden times), or playing softball. I've been teaching myself to code intermittently for a few years, but as a recent grad of Juno College's Web Dev Immersive Bootcamp, my ability to learn quickly has been supercharged and I'm ready for any challenge. I'm passionate about building fast, responsive and accessible sites using <strong>HTML5, CSS Grid, Javascript, and React.</strong> I also enjoy tinkering with backend technologies like <strong>Node, Express, MongoDB, Firebase, and REST APIs.</strong> If you'd like to work together, reach out!</p>
+              <nav>
+                <ul class="aboutNav">
+                  <li><a href="https://www.linkedin.com/in/daniel-noordegraaf-a41786216/"><i class="fa fa-linkedin"></i></a></li>
+                  <li><a href="https://github.com/danielnoo"><i class="fa fa-github"></i></a></li>
+                  <li><a href="https://twitter.com/danimalmidnight"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="https://medium.com/@dannynoo"><i class="fa fa-medium"></i></a></li>
+                </ul>
+              </nav>
             </div>
           </div>
         </section>
@@ -212,9 +220,9 @@
       <div class="footerContainer">
         <nav class="footerNav">
           <ul>
-            <li><a href="./index.html">Home</a></li>
+            <li><a id="footerHomeButton">Home</a></li>
             <li><a href="#projectOneParent">Work</a></li>
-            <li><a href="">About</a></li>
+            <li><a id="footerAboutButton" href="">About</a></li>
           </ul>
         </nav>
         <nav>
@@ -227,6 +235,7 @@
         </nav>
       </div>
     </footer>
+    <div class="scrollHomeButton"><i class="fa fa-angle-up"></i></div>
   </div><!--end wrapper-->
   <script src="./scripts.js" type="module"></script>
 </body>
