@@ -3,12 +3,16 @@ header {
   padding: 4rem 0;
   display: flex;
   align-items: center;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 .headerContainer {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
 
   .logoContainer {
     height: 100%;
@@ -17,7 +21,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 9rem;
+    
     width: 6rem;
 
     img {
@@ -34,7 +38,7 @@ header {
       display: flex;
       margin: 0;
       padding: 0;
-      margin-right: 9rem;
+      
 
       li {
         list-style-type: none;

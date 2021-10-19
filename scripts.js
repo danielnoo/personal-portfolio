@@ -40,6 +40,7 @@ app.aboutButton = document.querySelector('.aboutButton');
 app.handleNavClick = (e) => {
   e.preventDefault();
   
+  const aboutPage = document.querySelector('#aboutSection');
   const projectsPage = document.querySelector('#projectPage');
   const selectedLink = document.querySelector('.navSelected');
   selectedLink.classList.remove('navSelected');
@@ -47,6 +48,9 @@ app.handleNavClick = (e) => {
 
   if(e.target.innerText === 'Work') {
     projectsPage.classList.remove('notVisible');
+    if(!aboutPage.classList.contains('notVisible')) {
+      aboutPage.classList.add('notVisible');
+    }
     window.scroll({
       top: 850,
       left: 0,
@@ -54,20 +58,19 @@ app.handleNavClick = (e) => {
     });
   } else if(e.target.innerText === 'About') {
     projectsPage.classList.add('notVisible');
+    aboutPage.classList.remove('notVisible');
   } else {
     projectsPage.classList.remove('notVisible');
+    if(!aboutPage.classList.contains('notVisible')) {
+      aboutPage.classList.add('notVisible');
+    }
     window.scroll({
       top: 0,
       left: 0,
       behavior: 'smooth'
     });
-    
   }
-
 }
-    
-    
-
 
 
 app.selectProjectStyle = (e) => {
@@ -111,7 +114,11 @@ app.selectProjectStyle = (e) => {
 }
 
 
-
+app.textReplacement = () => {
+  const textReplace = document.querySelector('#textReplace');
+  const betweenWords = ['hacker', 'little weird', 'frisbeer', 'brother', 'casual cyclist', 'nerd', 'dork']
+  const stopOnWord = ['developer', 'tinkerer', 'pretty good Dad']
+}
 
 
 
