@@ -12,6 +12,7 @@
 
 .aboutImgContainer {
   width: 50%;
+  opacity: 0;
   img {
     max-width: 100%;
   }
@@ -30,4 +31,9 @@
     font-size: 1.9rem;
   }
 
+}
+
+.imgFadeIn {
+  transition: opacity 0.7s ease;
+  opacity: 1;
 }

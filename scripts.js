@@ -34,8 +34,8 @@ app.workButton = document.querySelector('.workButton');
 app.aboutButton = document.querySelector('.aboutButton');
 
 
-//////come back to finish with add/remove visibility to about page
-// also see about adding removing smooth scroll during function
+
+//// a click handle function that manages all three home Nav options
 
 app.handleNavClick = (e) => {
   e.preventDefault();
@@ -59,6 +59,7 @@ app.handleNavClick = (e) => {
   } else if(e.target.innerText === 'About') {
     projectsPage.classList.add('srOnly');
     aboutPage.classList.remove('srOnly');
+    document.querySelector('.aboutImgContainer').classList.add('imgFadeIn');
   } else {
     projectsPage.classList.remove('srOnly');
     if(!aboutPage.classList.contains('srOnly')) {
