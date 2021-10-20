@@ -141,7 +141,8 @@ app.footerHomeButtonClick = () => {
   }
 }
 
-app.footerAboutButtonClick = () => { 
+app.footerAboutButtonClick = (e) => { 
+  e.preventDefault();
   const aboutPage = document.querySelector('#aboutSection');
   const projectsPage = document.querySelector('#projectPage');
   if(app.aboutButton.classList.contains('navSelected')) {
@@ -217,6 +218,31 @@ app.scrollHomeButtonClicked = () => {
 }
   
 
+/// some code that deals with the expansion and closure of the
+/// mobile nav - also toggles the 'aria-expanded' attribute
+
+// define elements
+
+app.hamburgerButton = document.querySelector('#menuToggle');
+app.mobileNav = document.querySelector('#mobileNav');
+
+// callback function for button's onclick
+
+app.handleBurgerClick = () => {
+  if(mobileNav.classList.contains('srOnly')) {
+    mobileNav.setAttribute('aria-expanded', true);
+    mobileNav.classList.toggle('srOnly');
+    document.querySelector('.burgOne').classList.add('srOnly');
+    document.querySelector('.burgTwo').classList.add('spinnyBurgerTop');
+    document.querySelector('.burgThree').classList.add('spinnyBurgerBottom');
+  } else {
+    mobileNav.setAttribute('aria-expanded', false);
+    mobileNav.classList.toggle('srOnly');
+    document.querySelector('.burgOne').classList.remove('srOnly');
+    document.querySelector('.burgTwo').classList.remove('spinnyBurgerTop');
+    document.querySelector('.burgThree').classList.remove('spinnyBurgerBottom');
+  }
+}
 
 
 
@@ -254,8 +280,8 @@ app.init = () => {
   window.addEventListener('scroll', app.checkScrollDown);
   app.scrollHomeButton.addEventListener('click', app.scrollHomeButtonClicked);
   app.footerHomeButton.addEventListener('click', app.footerHomeButtonClick);
-
-
+  app.footerAboutButton.addEventListener('click', app.footerAboutButtonClick);
+  app.hamburgerButton.addEventListener('click', app.handleBurgerClick)
   // random words in about section
   app.textReplacement();
 

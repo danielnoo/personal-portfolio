@@ -242,6 +242,7 @@ header {
           align-items: center;
   max-width: 1600px;
   margin: 0 auto;
+  border-bottom: 1px solid #adadad;
 }
 
 .headerContainer {
@@ -255,13 +256,13 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
+  position: relative;
 }
 .headerContainer .logoContainer {
   height: 100%;
-  border-top: 4px solid black;
-  border-bottom: 4px solid black;
+  border: 4px solid black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -272,11 +273,15 @@ header {
       -ms-flex-align: center;
           align-items: center;
   width: 6rem;
+  z-index: 2;
 }
-.headerContainer .logoContainer img {
-  max-width: 80%;
-  margin-top: 3%;
-  margin-left: 3%;
+.headerContainer .logoContainer h1 {
+  margin: 0.2rem;
+  font-weight: 400;
+}
+.headerContainer .logoContainer a {
+  text-decoration: none;
+  color: black;
 }
 .headerContainer nav ul {
   display: -webkit-box;
@@ -303,6 +308,116 @@ header {
 
 .headerNav .navSelected {
   border: 3px solid black;
+}
+
+.mobileNav {
+  position: absolute;
+  width: 100%;
+  height: 20rem;
+  bottom: -15rem;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.mobileNav .mobileNavList {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.mobileNav .mobileNavList a:hover {
+  border: 3px solid black;
+}
+.mobileNav .mobileNavList a:focus {
+  border: 3px solid black;
+}
+.mobileNav .mobileSocialNav a:hover {
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  background-color: black;
+  color: white;
+}
+.mobileNav .mobileSocialNav a:focus {
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  background-color: black;
+  color: white;
+}
+
+.menuToggle {
+  position: absolute;
+  right: 0;
+  top: 1rem;
+  height: 2rem;
+  width: 2rem;
+  z-index: 3;
+  opacity: 0;
+}
+
+.burgerBars {
+  position: absolute;
+  right: 0;
+  top: 1rem;
+  height: 2rem;
+  width: 2rem;
+  z-index: 2;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.burgOne {
+  width: 2rem;
+  height: 15%;
+  background-color: black;
+}
+
+.burgTwo {
+  width: 2rem;
+  height: 15%;
+  background-color: black;
+}
+
+.burgThree {
+  width: 2rem;
+  height: 15%;
+  background-color: black;
+}
+
+.spinnyBurgerTop {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: translateY(0.4rem) rotate(225deg);
+          transform: translateY(0.4rem) rotate(225deg);
+}
+
+.spinnyBurgerBottom {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: translateY(-0.4rem) rotate(-225deg);
+          transform: translateY(-0.4rem) rotate(-225deg);
 }
 
 .heroHeaderContainer {
@@ -420,6 +535,19 @@ header {
   padding: 2rem;
   width: 80%;
   margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (max-width: 1350px) {
+  .workContainer {
+    width: 90%;
+  }
+}
+@media (max-width: 1200px) {
+  .workContainer {
+    width: 60%;
+  }
 }
 .workContainer .project h3 {
   font-weight: 400;
@@ -597,6 +725,49 @@ footer {
   -webkit-transition: opacity 0.7s ease-in;
   transition: opacity 0.7s ease-in;
   opacity: 1;
+}
+
+.aboutSocialNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+}
+.aboutSocialNav li {
+  list-style: none;
+  padding: 0.5rem 2.5rem;
+  margin: 0.5rem 1.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.aboutSocialNav li:hover {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background-color: black;
+  color: white;
+}
+.aboutSocialNav li:hover a {
+  color: white;
+}
+.aboutSocialNav li:hover i {
+  color: white;
+}
+.aboutSocialNav li:focus {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background-color: black;
+  color: white;
+}
+.aboutSocialNav li:focus a {
+  color: white;
+}
+.aboutSocialNav li:focus i {
+  color: white;
+}
+.aboutSocialNav li a {
+  text-decoration: none;
+  color: black;
+  letter-spacing: 3px;
 }
 
 body {
