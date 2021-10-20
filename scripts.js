@@ -227,9 +227,13 @@ app.init = () => {
 
   // loop over the array of projects and add event listeners to 
   // apply and remove the slide-over information div on hover
+  // added focus event here and tabindex to html
 
   app.projectParents.forEach((project, index) => {
     project.addEventListener('mouseover', () => {
+      app.projectDetails[index].classList.add('mouseOverSlide');
+    })
+    project.addEventListener('focus', () => {
       app.projectDetails[index].classList.add('mouseOverSlide');
     })
     project.addEventListener('mouseout', () => {
