@@ -47,9 +47,9 @@ app.handleNavClick = (e) => {
   e.target.classList.add('navSelected');
 
   if(e.target.innerText === 'Work') {
-    projectsPage.classList.remove('notVisible');
-    if(!aboutPage.classList.contains('notVisible')) {
-      aboutPage.classList.add('notVisible');
+    projectsPage.classList.remove('srOnly');
+    if(!aboutPage.classList.contains('srOnly')) {
+      aboutPage.classList.add('srOnly');
     }
     window.scroll({
       top: 850,
@@ -57,12 +57,12 @@ app.handleNavClick = (e) => {
       behavior: 'smooth'
     });
   } else if(e.target.innerText === 'About') {
-    projectsPage.classList.add('notVisible');
-    aboutPage.classList.remove('notVisible');
+    projectsPage.classList.add('srOnly');
+    aboutPage.classList.remove('srOnly');
   } else {
-    projectsPage.classList.remove('notVisible');
-    if(!aboutPage.classList.contains('notVisible')) {
-      aboutPage.classList.add('notVisible');
+    projectsPage.classList.remove('srOnly');
+    if(!aboutPage.classList.contains('srOnly')) {
+      aboutPage.classList.add('srOnly');
     }
     window.scroll({
       top: 0,
@@ -75,7 +75,7 @@ app.handleNavClick = (e) => {
 
 app.selectProjectStyle = (e) => {
   app.projectParents.forEach(project => {
-    project.classList.remove('notVisible');
+    project.classList.remove('srOnly');
   })
   if(e.target.innerText === 'All') {
     app.allButton.classList.add('selected');
@@ -83,8 +83,8 @@ app.selectProjectStyle = (e) => {
     app.jsButton.classList.remove('selected');
     
     app.projectParents.forEach(project => {
-      if(project.classList.contains('notVisible')) {
-         project.classList.toggle('notVisible');
+      if(project.classList.contains('srOnly')) {
+         project.classList.toggle('srOnly');
         } 
      
     })
@@ -95,7 +95,7 @@ app.selectProjectStyle = (e) => {
 
     app.projectParents.forEach((project, index) => {
       if(index > 1) {
-        project.classList.toggle('notVisible');
+        project.classList.toggle('srOnly');
       }
     })
   } else {
@@ -105,9 +105,9 @@ app.selectProjectStyle = (e) => {
 
     app.projectParents.forEach((project, index) => {
       if(index === 2 || index === 5) {
-        project.classList.remove('notVisible');
+        project.classList.remove('srOnly');
       } else {
-        project.classList.add('notVisible');
+        project.classList.add('srOnly');
       }
     })
   }
@@ -135,8 +135,8 @@ app.footerHomeButtonClick = () => {
     const projectsPage = document.querySelector('#projectPage');
     app.aboutButton.classList.remove('navSelected');
     app.homeButton.classList.add('navSelected');
-    aboutPage.classList.add('notVisible');
-    projectsPage.classList.remove('notVisible');
+    aboutPage.classList.add('srOnly');
+    projectsPage.classList.remove('srOnly');
   }
 }
 
@@ -154,8 +154,8 @@ app.footerAboutButtonClick = () => {
     app.aboutButton.classList.add('navSelected');
     app.homeButton.classList.remove('navSelected');
     app.workButton.classList.remove('navSelected');
-    projectsPage.classList.add('notVisible');
-    aboutPage.classList.remove('notVisible');
+    projectsPage.classList.add('srOnly');
+    aboutPage.classList.remove('srOnly');
   }
 };
 

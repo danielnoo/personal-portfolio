@@ -217,7 +217,7 @@ template {
   box-sizing: border-box;
 }
 
-.sr-only {
+.srOnly {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -411,10 +411,6 @@ header {
 
 .projectTypeSelector .selected {
   border: 3px solid black;
-}
-
-.notVisible {
-  display: none;
 }
 
 .workContainer {
