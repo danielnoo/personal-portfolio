@@ -27,7 +27,7 @@ app.allButton = document.querySelector('#allButton');
 app.reactButton = document.querySelector('#reactButton');
 app.jsButton = document.querySelector('#jsButton');
 
-/////nav button declarations
+///// home nav button declarations
 
 app.homeButton = document.querySelector('.homeButton');
 app.workButton = document.querySelector('.workButton');
@@ -47,9 +47,9 @@ app.handleNavClick = (e) => {
   e.target.classList.add('navSelected');
 
   if(e.target.innerText === 'Work') {
-    projectsPage.classList.remove('notVisible');
-    if(!aboutPage.classList.contains('notVisible')) {
-      aboutPage.classList.add('notVisible');
+    projectsPage.classList.remove('srOnly');
+    if(!aboutPage.classList.contains('srOnly')) {
+      aboutPage.classList.add('srOnly');
     }
     window.scroll({
       top: 850,
@@ -57,12 +57,12 @@ app.handleNavClick = (e) => {
       behavior: 'smooth'
     });
   } else if(e.target.innerText === 'About') {
-    projectsPage.classList.add('notVisible');
-    aboutPage.classList.remove('notVisible');
+    projectsPage.classList.add('srOnly');
+    aboutPage.classList.remove('srOnly');
   } else {
-    projectsPage.classList.remove('notVisible');
-    if(!aboutPage.classList.contains('notVisible')) {
-      aboutPage.classList.add('notVisible');
+    projectsPage.classList.remove('srOnly');
+    if(!aboutPage.classList.contains('srOnly')) {
+      aboutPage.classList.add('srOnly');
     }
     window.scroll({
       top: 0,
@@ -75,7 +75,7 @@ app.handleNavClick = (e) => {
 
 app.selectProjectStyle = (e) => {
   app.projectParents.forEach(project => {
-    project.classList.remove('notVisible');
+    project.classList.remove('srOnly');
   })
   if(e.target.innerText === 'All') {
     app.allButton.classList.add('selected');
@@ -83,8 +83,8 @@ app.selectProjectStyle = (e) => {
     app.jsButton.classList.remove('selected');
     
     app.projectParents.forEach(project => {
-      if(project.classList.contains('notVisible')) {
-         project.classList.toggle('notVisible');
+      if(project.classList.contains('srOnly')) {
+         project.classList.toggle('srOnly');
         } 
      
     })
@@ -95,7 +95,7 @@ app.selectProjectStyle = (e) => {
 
     app.projectParents.forEach((project, index) => {
       if(index > 1) {
-        project.classList.toggle('notVisible');
+        project.classList.toggle('srOnly');
       }
     })
   } else {
@@ -105,20 +105,117 @@ app.selectProjectStyle = (e) => {
 
     app.projectParents.forEach((project, index) => {
       if(index === 2 || index === 5) {
-        project.classList.remove('notVisible');
+        project.classList.remove('srOnly');
       } else {
-        project.classList.add('notVisible');
+        project.classList.add('srOnly');
       }
     })
   }
 }
 
 
+/// footer nav declarations
+/// the footer work button is left as a link to behave beter on mobile and weird screens
+
+app.footerHomeButton = document.querySelector('#footerHomeButton');
+app.footerAboutButton = document.querySelector('#footerAboutButton');
+
+//// two simple callback functions to deal handle clicks in the footer Nav
+/// if clicked in the about page, reset the nav selections, otherwise this change
+/// is handled by the scroll listener function resetTopNav
+app.footerHomeButtonClick = () => {
+  window.scroll({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  });
+
+   if(app.aboutButton.classList.contains('navSelected')) {
+    const aboutPage = document.querySelector('#aboutSection');
+    const projectsPage = document.querySelector('#projectPage');
+    app.aboutButton.classList.remove('navSelected');
+    app.homeButton.classList.add('navSelected');
+    aboutPage.classList.add('srOnly');
+    projectsPage.classList.remove('srOnly');
+  }
+}
+
+app.footerAboutButtonClick = () => { 
+  const aboutPage = document.querySelector('#aboutSection');
+  const projectsPage = document.querySelector('#projectPage');
+  if(app.aboutButton.classList.contains('navSelected')) {
+    window.scroll({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  });
+    return
+  } else {
+    app.aboutButton.classList.add('navSelected');
+    app.homeButton.classList.remove('navSelected');
+    app.workButton.classList.remove('navSelected');
+    projectsPage.classList.add('srOnly');
+    aboutPage.classList.remove('srOnly');
+  }
+};
+
+
+///// a function that cycles through words repeatedly, but stops for a little over 1 
+//// second each cycle, then starts again
+
 app.textReplacement = () => {
   const textReplace = document.querySelector('#textReplace');
-  const betweenWords = ['hacker', 'little weird', 'frisbeer', 'brother', 'casual cyclist', 'nerd', 'dork']
-  const stopOnWord = ['developer', 'tinkerer', 'pretty good Dad']
+  const words = ['a hacker', 'a little weird', 'a joker', 'a brother', 'a casual cyclist', 'a nerd', 'a developer', 'a tinkerer', 'a pretty good Dad', 'a brunch enthusiast', 'a partner'];
+  
+  setInterval(() => {
+    let counter = 0;
+    
+    let showBetweenWords = setInterval(() => {
+      textReplace.innerText = words[Math.floor(Math.random() * 11)]
+      counter++;
+      if(counter > 16) {
+        clearInterval(showBetweenWords);
+        textReplace.innerText = words[Math.floor(Math.random() * 11)]
+      }
+    }, 100)
+  },3000)
 }
+
+/// a scroll listener callback function that should reset the top nav classes if page is scrolled to the top
+
+app.resetTopNav = () => {
+  if(window.scrollY === 0 && app.aboutButton.classList.contains('navSelected')) {
+    return
+  } else if(window.scrollY === 0 && app.workButton.classList.contains('navSelected')) {
+    app.homeButton.classList.add('navSelected');
+    app.workButton.classList.remove('navSelected');
+  }
+}
+
+/// a scroll listener callback function that should hide/show a button that scrolls user to top of page 
+
+app.checkScrollDown = () => {
+  if(window.scrollY > 0) {
+    app.scrollHomeButton.style.visibility = 'visible';
+  } else if(window.scrollY === 0) {
+    app.scrollHomeButton.style.visibility = 'hidden';
+  }
+}
+
+/// also the definition of that button which scrolls back to the top of the page :)
+
+app.scrollHomeButton = document.querySelector('.scrollHomeButton');
+
+// used as callback function when the arrow button is clicked to scroll user to top of page
+app.scrollHomeButtonClicked = () => {
+  window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+  });
+}
+  
+
 
 
 
@@ -139,13 +236,29 @@ app.init = () => {
     })
   })
 
+
+  /// event listeners
+
   app.allButton.addEventListener('click', app.selectProjectStyle);
   app.reactButton.addEventListener('click', app.selectProjectStyle);
   app.jsButton.addEventListener('click', app.selectProjectStyle);
-
   app.homeButton.addEventListener('click', app.handleNavClick);
   app.workButton.addEventListener('click', app.handleNavClick);
   app.aboutButton.addEventListener('click', app.handleNavClick);
+  window.addEventListener('scroll', app.resetTopNav);
+  window.addEventListener('scroll', app.checkScrollDown);
+  app.scrollHomeButton.addEventListener('click', app.scrollHomeButtonClicked);
+  app.footerHomeButton.addEventListener('click', app.footerHomeButtonClick);
+
+
+  // random words in about section
+  app.textReplacement();
+
+
+
+  
+
+
 
 }
 

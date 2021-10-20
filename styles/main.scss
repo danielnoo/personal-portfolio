@@ -23,6 +23,20 @@ body {
   margin: 0 auto;
 }
 
+.scrollHomeButton {
+  position: fixed;
+  bottom: 12rem;
+  right: 2rem;
+  color: white;
+  background-color: black;
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
 
 
 
