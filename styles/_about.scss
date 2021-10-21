@@ -1,14 +1,9 @@
-
-
-
-
 .aboutContainer {
   width: 80%;
   margin: 3rem auto 0;
   display: flex;
   justify-content: space-between;
 }
-
 
 .aboutImgContainer {
   width: 50%;
@@ -17,8 +12,6 @@
     max-width: 100%;
   }
 }
-
-    
 
 .aboutTextContainer {
   width: 47%;
@@ -30,7 +23,6 @@
   h4 {
     font-size: 1.9rem;
   }
-
 }
 
 .imgFadeIn {
@@ -39,8 +31,9 @@
 }
 
 .aboutSocialNav {
-    display: flex;
-    padding: 0;
+  display: flex;
+  justify-content: center;
+  padding: 0;
 
   li {
     list-style: none;
@@ -53,7 +46,7 @@
       transition: all 0.5s ease;
       background-color: black;
       color: white;
-          
+
       a {
         color: white;
       }
@@ -66,7 +59,7 @@
       transition: all 0.5s ease;
       background-color: black;
       color: white;
-          
+
       a {
         color: white;
       }
@@ -75,7 +68,7 @@
       }
     }
 
-    a{
+    a {
       text-decoration: none;
       color: black;
       letter-spacing: 3px;

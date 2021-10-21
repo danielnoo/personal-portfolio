@@ -1,4 +1,55 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@media (max-width: 1600px) {
+  .aboutContainer .aboutTextContainer p {
+    font-size: 1rem;
+  }
+  .aboutContainer .aboutTextContainer h4 {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 1200px) {
+  .aboutContainer .aboutImgContainer {
+    margin-top: 2rem;
+    width: 42%;
+  }
+  .aboutContainer .aboutTextContainer {
+    width: 56%;
+  }
+
+  .footerContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media (max-width: 1000px) {
+  .headerNav {
+    display: none;
+  }
+
+  .aboutContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .aboutContainer .aboutImgContainer {
+    width: 70%;
+  }
+  .aboutContainer .aboutTextContainer {
+    width: 70%;
+  }
+  .aboutContainer .aboutTextContainer h4 {
+    font-size: 1.3rem;
+  }
+}
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -329,6 +380,7 @@ header {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  opacity: 0;
 }
 .mobileNav .mobileNavList {
   -webkit-box-orient: vertical;
@@ -338,6 +390,9 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.mobileNav .mobileNavList a {
+  cursor: pointer;
 }
 .mobileNav .mobileNavList a:hover {
   border: 3px solid black;
@@ -356,6 +411,12 @@ header {
   transition: all 0.3s ease-in;
   background-color: black;
   color: white;
+}
+
+.swapOpacity {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
 }
 
 .menuToggle {
@@ -731,6 +792,9 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0;
 }
 .aboutSocialNav li {

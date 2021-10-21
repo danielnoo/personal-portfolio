@@ -24,7 +24,7 @@ header {
     align-items: center;
     width: 6rem;
     z-index: 2;
-    
+
     h1 {
       margin: 0.2rem;
       font-weight: 400;
@@ -34,16 +34,13 @@ header {
       text-decoration: none;
       color: black;
     }
-
   }
 
   nav {
-
     ul {
       display: flex;
       margin: 0;
       padding: 0;
-      
 
       li {
         list-style-type: none;
@@ -56,7 +53,7 @@ header {
           letter-spacing: 5px;
           border: 3px solid white;
           padding: 0.3rem 2rem;
-          transition: all .3s ease;
+          transition: all 0.3s ease;
           font-size: 1rem;
         }
       }
@@ -68,8 +65,6 @@ header {
   border: 3px solid black;
 }
 
-
-
 .mobileNav {
   position: absolute;
   width: 100%;
@@ -80,12 +75,15 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  opacity: 0;
 
-  
   .mobileNavList {
     flex-direction: column;
     align-items: center;
 
+    a {
+      cursor: pointer;
+    }
     a:hover {
       border: 3px solid black;
     }
@@ -95,20 +93,25 @@ header {
   }
 
   .mobileSocialNav {
-   
     a:hover {
-        transition: all 0.3s ease-in;
-        background-color: black;
-        color: white;
+      transition: all 0.3s ease-in;
+      background-color: black;
+      color: white;
     }
     a:focus {
-        transition: all 0.3s ease-in;
-        background-color: black;
-        color: white;
+      transition: all 0.3s ease-in;
+      background-color: black;
+      color: white;
     }
   }
 }
 
+// class to toggle opacity on menu
+
+.swapOpacity {
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+}
 
 // the button that controls the show/hide of the mobile nav
 // using opacity to stay hidden but z-index to remain on top, receiving clicks
@@ -136,28 +139,25 @@ header {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly
+  justify-content: space-evenly;
 }
 
 .burgOne {
   width: 2rem;
   height: 15%;
   background-color: black;
-  
 }
 
 .burgTwo {
   width: 2rem;
   height: 15%;
   background-color: black;
-  
 }
 
 .burgThree {
   width: 2rem;
   height: 15%;
   background-color: black;
-  
 }
 
 // move the divs toward each other and form an X
