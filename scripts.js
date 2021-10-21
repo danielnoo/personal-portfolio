@@ -154,7 +154,7 @@ app.footerWorkButtonClick = (e) => {
     return;
   }
 };
- 
+
 //// a function that handles clicks for the About button in
 //// the footer section
 
@@ -250,18 +250,15 @@ app.scrollHomeButtonClicked = () => {
   });
 };
 
-
- //// code for mobile nav menu buttons
+//// code for mobile nav menu buttons
 
 /// declarations
 
-app.mobileHomeButton = document.querySelector('#mobileHome');
-app.mobileWorkButton = document.querySelector('#mobileWork');
-app.mobileAboutButton = document.querySelector('#mobileAbout');
+app.mobileHomeButton = document.querySelector("#mobileHome");
+app.mobileWorkButton = document.querySelector("#mobileWork");
+app.mobileAboutButton = document.querySelector("#mobileAbout");
 
 /// the click handlers for these buttons are shared with the footer buttons
-  
- 
 
 /// some code that deals with the expansion and closure of the
 /// mobile nav - also toggles the 'aria-expanded' attribute
@@ -308,7 +305,6 @@ app.init = () => {
     });
   });
 
- 
   /// event listeners
 
   app.allButton.addEventListener("click", app.selectProjectStyle);
@@ -327,7 +323,7 @@ app.init = () => {
   app.mobileHomeButton.addEventListener("click", app.footerHomeButtonClick);
   app.mobileWorkButton.addEventListener("click", app.footerWorkButtonClick);
   app.mobileAboutButton.addEventListener("click", app.footerAboutButtonClick);
-  
+
   // random words function in about section
   app.textReplacement();
 };
