@@ -4,8 +4,6 @@
   overflow: hidden;
   display: grid;
   grid-template-columns: 50% 50%;
-  
-  
 }
 
 .heroImgContainer {
@@ -131,6 +129,9 @@
 }
 
   
+/// show projects with a minimum width, scaling to 1 fractional unit
+/// because of restrictions put on this div by it's wrapper parent, it will
+// be either a one or two column grid, but never three. 
 
 .workContainer {
   display: grid;
@@ -139,6 +140,22 @@
   padding: 2rem;
   width: 80%;
   margin: 0 auto;
+  justify-content: center;
+
+  
+  // quick media query to ensure that the projects
+  // container both maintains the two column grid
+  // on as many screens as possible and a second to 
+  // constrict the width of the container at medium resolutions
+  // so that projects don't appear too large on the screen
+  
+  
+  @media(max-width: 1350px) {
+    width: 90%;
+  }
+  @media(max-width: 1200px) {
+    width: 60%;
+  }
   
 
   .project {
