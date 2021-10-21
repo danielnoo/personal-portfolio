@@ -1,13 +1,11 @@
-@import './mediaQueries';
-@import './normalize';
-@import './variables';
-@import './header';
-@import './home';
-@import './footer';
-@import './about';
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
-
+@import "./mediaQueries";
+@import "./normalize";
+@import "./variables";
+@import "./header";
+@import "./home";
+@import "./footer";
+@import "./about";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
 body {
   font-size: 125%;
@@ -38,6 +36,3 @@ body {
   align-items: center;
   visibility: hidden;
 }
-
-
-

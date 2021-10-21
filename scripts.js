@@ -67,8 +67,7 @@ app.handleNavClick = (e) => {
   }
 };
 
-
-/// code for project selection menu 
+/// code for project selection menu
 
 app.selectProjectStyle = (e) => {
   app.projectParents.forEach((project) => {
@@ -137,9 +136,7 @@ app.footerHomeButtonClick = () => {
 };
 
 app.footerWorkButtonClick = (e) => {
-  
-  
-  if(app.aboutButton.classList.contains("navSelected")) {
+  if (app.aboutButton.classList.contains("navSelected")) {
     e.preventDefault();
     const aboutPage = document.querySelector("#aboutSection");
     const projectsPage = document.querySelector("#projectPage");
@@ -153,10 +150,9 @@ app.footerWorkButtonClick = (e) => {
       behavior: "smooth",
     });
   } else {
-    return
+    return;
   }
-
-}
+};
 
 app.footerAboutButtonClick = (e) => {
   e.preventDefault();
