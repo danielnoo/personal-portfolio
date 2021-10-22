@@ -19,9 +19,16 @@
   flex-direction: column;
   line-height: 1.7rem;
   justify-content: center;
+  position: relative;
 
   h4 {
     font-size: 1.9rem;
+    position: absolute;
+    top: 1rem;
+  }
+
+  p {
+    margin-top: 7rem;
   }
 }
 

@@ -1,12 +1,18 @@
 @media (max-width: 1600px) {
-  .aboutContainer .aboutTextContainer {
+  .aboutContainer {
+  
+  .aboutImgContainer { width: 47%}
+  .aboutTextContainer {
+    width: 50%;
     p {
       font-size: 1rem;
+      
     }
     h4 {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
     }
   }
+}
 }
 
 @media (max-width: 1200px) {
