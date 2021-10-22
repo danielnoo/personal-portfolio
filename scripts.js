@@ -23,6 +23,11 @@ app.allButton = document.querySelector("#allButton");
 app.reactButton = document.querySelector("#reactButton");
 app.jsButton = document.querySelector("#jsButton");
 
+//// project page and about page declarations
+
+app.projectsPage = document.querySelector("#projectPage");
+app.aboutPage = document.querySelector("#aboutSection");
+
 ///// home nav button declarations
 
 app.homeButton = document.querySelector(".homeButton");
@@ -33,17 +38,14 @@ app.aboutButton = document.querySelector(".aboutButton");
 
 app.handleNavClick = (e) => {
   e.preventDefault();
-
-  const aboutPage = document.querySelector("#aboutSection");
-  const projectsPage = document.querySelector("#projectPage");
   const selectedLink = document.querySelector(".navSelected");
   selectedLink.classList.remove("navSelected");
   e.target.classList.add("navSelected");
 
   if (e.target.innerText === "Work") {
-    projectsPage.classList.remove("srOnly");
-    if (!aboutPage.classList.contains("srOnly")) {
-      aboutPage.classList.add("srOnly");
+    app.projectsPage.classList.remove("srOnly");
+    if (!app.aboutPage.classList.contains("srOnly")) {
+      app.aboutPage.classList.add("srOnly");
     }
     window.scroll({
       top: 850,
@@ -51,13 +53,13 @@ app.handleNavClick = (e) => {
       behavior: "smooth",
     });
   } else if (e.target.innerText === "About") {
-    projectsPage.classList.add("srOnly");
-    aboutPage.classList.remove("srOnly");
+    app.projectsPage.classList.add("srOnly");
+    app.aboutPage.classList.remove("srOnly");
     document.querySelector(".aboutImgContainer").classList.add("imgFadeIn");
   } else {
-    projectsPage.classList.remove("srOnly");
-    if (!aboutPage.classList.contains("srOnly")) {
-      aboutPage.classList.add("srOnly");
+    app.projectsPage.classList.remove("srOnly");
+    if (!app.aboutPage.classList.contains("srOnly")) {
+      app.aboutPage.classList.add("srOnly");
     }
     window.scroll({
       top: 0,
@@ -67,8 +69,7 @@ app.handleNavClick = (e) => {
   }
 };
 
-
-/// code for project selection menu 
+/// code for project selection menu
 
 app.selectProjectStyle = (e) => {
   app.projectParents.forEach((project) => {
@@ -127,41 +128,38 @@ app.footerHomeButtonClick = () => {
   });
 
   if (app.aboutButton.classList.contains("navSelected")) {
-    const aboutPage = document.querySelector("#aboutSection");
-    const projectsPage = document.querySelector("#projectPage");
     app.aboutButton.classList.remove("navSelected");
     app.homeButton.classList.add("navSelected");
-    aboutPage.classList.add("srOnly");
-    projectsPage.classList.remove("srOnly");
+    app.aboutPage.classList.add("srOnly");
+    app.projectsPage.classList.remove("srOnly");
   }
 };
 
+//// a function that handles clicks for the Work button in
+//// the footer section
+
 app.footerWorkButtonClick = (e) => {
-  
-  
-  if(app.aboutButton.classList.contains("navSelected")) {
+  if (app.aboutButton.classList.contains("navSelected")) {
     e.preventDefault();
-    const aboutPage = document.querySelector("#aboutSection");
-    const projectsPage = document.querySelector("#projectPage");
     app.aboutButton.classList.remove("navSelected");
     app.workButton.classList.add("navSelected");
-    aboutPage.classList.add("srOnly");
-    projectsPage.classList.remove("srOnly");
+    app.aboutPage.classList.add("srOnly");
+    app.projectsPage.classList.remove("srOnly");
     window.scroll({
       top: 850,
       left: 0,
       behavior: "smooth",
     });
   } else {
-    return
+    return;
   }
+};
 
-}
+//// a function that handles clicks for the About button in
+//// the footer section
 
 app.footerAboutButtonClick = (e) => {
   e.preventDefault();
-  const aboutPage = document.querySelector("#aboutSection");
-  const projectsPage = document.querySelector("#projectPage");
   if (app.aboutButton.classList.contains("navSelected")) {
     window.scroll({
       top: 0,
@@ -173,8 +171,8 @@ app.footerAboutButtonClick = (e) => {
     app.aboutButton.classList.add("navSelected");
     app.homeButton.classList.remove("navSelected");
     app.workButton.classList.remove("navSelected");
-    projectsPage.classList.add("srOnly");
-    aboutPage.classList.remove("srOnly");
+    app.projectsPage.classList.add("srOnly");
+    app.aboutPage.classList.remove("srOnly");
     document.querySelector(".aboutImgContainer").classList.add("imgFadeIn");
   }
 };
@@ -252,6 +250,16 @@ app.scrollHomeButtonClicked = () => {
   });
 };
 
+//// code for mobile nav menu buttons
+
+/// declarations
+
+app.mobileHomeButton = document.querySelector("#mobileHome");
+app.mobileWorkButton = document.querySelector("#mobileWork");
+app.mobileAboutButton = document.querySelector("#mobileAbout");
+
+/// the click handlers for these buttons are shared with the footer buttons
+
 /// some code that deals with the expansion and closure of the
 /// mobile nav - also toggles the 'aria-expanded' attribute
 
@@ -312,7 +320,11 @@ app.init = () => {
   app.footerWorkButton.addEventListener("click", app.footerWorkButtonClick);
   app.footerAboutButton.addEventListener("click", app.footerAboutButtonClick);
   app.hamburgerButton.addEventListener("click", app.handleBurgerClick);
-  // random words in about section
+  app.mobileHomeButton.addEventListener("click", app.footerHomeButtonClick);
+  app.mobileWorkButton.addEventListener("click", app.footerWorkButtonClick);
+  app.mobileAboutButton.addEventListener("click", app.footerAboutButtonClick);
+
+  // random words function in about section
   app.textReplacement();
 };
 
