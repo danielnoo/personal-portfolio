@@ -268,7 +268,8 @@ app.mobileAboutButton = document.querySelector("#mobileAbout");
 app.hamburgerButton = document.querySelector("#menuToggle");
 app.mobileNav = document.querySelector("#mobileNav");
 
-// callback function for button's onclick
+// callback function for button's onclick, this button has an opacity
+// of 0 and is overlayed on top of the hamburger bars
 
 app.handleBurgerClick = () => {
   if (mobileNav.classList.contains("srOnly")) {
@@ -287,6 +288,15 @@ app.handleBurgerClick = () => {
     document.querySelector(".burgThree").classList.remove("spinnyBurgerBottom");
   }
 };
+
+app.burgerButtonFocus = () => {
+  app.hamburgerButton.style.opacity = '0.5';
+  app.hamburgerButton.style.border = '3px solid black';
+}
+app.burgerButtonBlur = () => {
+  app.hamburgerButton.style.opacity = '0';
+  app.hamburgerButton.style.border = '3px solid white';
+}
 
 app.init = () => {
   // loop over the array of projects and add event listeners to
@@ -320,6 +330,8 @@ app.init = () => {
   app.footerWorkButton.addEventListener("click", app.footerWorkButtonClick);
   app.footerAboutButton.addEventListener("click", app.footerAboutButtonClick);
   app.hamburgerButton.addEventListener("click", app.handleBurgerClick);
+  app.hamburgerButton.addEventListener('focus', app.burgerButtonFocus);
+  app.hamburgerButton.addEventListener('blur', app.burgerButtonBlur);
   app.mobileHomeButton.addEventListener("click", app.footerHomeButtonClick);
   app.mobileWorkButton.addEventListener("click", app.footerWorkButtonClick);
   app.mobileAboutButton.addEventListener("click", app.footerAboutButtonClick);
